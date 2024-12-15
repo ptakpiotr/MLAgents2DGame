@@ -7,7 +7,7 @@ public class PlayerScript : MonoBehaviour
     private int score = 0;
 
     public BoxCollider2D ghostCollider;
-    public float upForce = 1.5f;
+    public float upForce = 2.5f;
 
     private void Awake()
     {
@@ -18,7 +18,7 @@ public class PlayerScript : MonoBehaviour
         Collider2D thisCollider = GetComponent<Collider2D>();
         Physics2D.IgnoreCollision(thisCollider, ghostCollider);
     }
-
+    /*
     private void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
@@ -30,11 +30,16 @@ public class PlayerScript : MonoBehaviour
             Debug.Log($"Score: {score}");
         }
     }
-
+    */
     private void Update()
     {
-        if (gameObject.active)
+        if (gameObject.active && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)))
         {
+            rigidbody2d.linearVelocity = Vector2.zero;
+            rigidbody2d.AddForce(new Vector2(0, upForce), ForceMode2D.Impulse);
+            animator.Play("up");
+            Invoke("ChangeSprite", 1f);
+            Debug.Log($"Score: {score}");
             score += 1;
         }
     }
