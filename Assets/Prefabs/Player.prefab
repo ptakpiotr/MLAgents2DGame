@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghostCollider: {fileID: 0}
-  upForce: 1.5
+  upForce: 2
 --- !u!95 &242901684459812579
 Animator:
   serializedVersion: 7

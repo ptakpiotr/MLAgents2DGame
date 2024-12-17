@@ -843,7 +843,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1230571774401305094, guid: 040c9b0f647f51e468bbcff5cb78bcaa, type: 3}
       propertyPath: upForce
-      value: 1.75
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1230571774401305094, guid: 040c9b0f647f51e468bbcff5cb78bcaa, type: 3}
       propertyPath: ghostCollider

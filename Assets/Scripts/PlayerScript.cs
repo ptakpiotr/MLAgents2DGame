@@ -18,7 +18,7 @@ public class PlayerScript : MonoBehaviour
         Collider2D thisCollider = GetComponent<Collider2D>();
         Physics2D.IgnoreCollision(thisCollider, ghostCollider);
     }
-    /*
+
     private void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
@@ -28,14 +28,6 @@ public class PlayerScript : MonoBehaviour
             animator.Play("up");
             Invoke("ChangeSprite", 1f);
             Debug.Log($"Score: {score}");
-        }
-    }
-
-    private void Update()
-    {
-        if (gameObject.active)
-        {
-            score += 1;
         }
     }
 
