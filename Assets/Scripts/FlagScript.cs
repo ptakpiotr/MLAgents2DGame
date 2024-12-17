@@ -1,12 +1,8 @@
 using UnityEngine;
 
-public class ObstacleScript : MonoBehaviour
+public class FlagScript : MonoBehaviour
 {
     public float scrollSpeed = 1.5f;
-
-    private void Start()
-    {
-    }
 
     private void Update()
     {
@@ -26,7 +22,14 @@ public class ObstacleScript : MonoBehaviour
     {
         if (collision.tag == "Player" || collision.tag == "Agent")
         {
-            collision.gameObject.SetActive(false);
+            PlayerScript playerScript = collision.GetComponent<PlayerScript>();
+
+            if (playerScript is not null)
+            {
+                playerScript.UpdateScore(10);
+            }
+
+            gameObject.SetActive(false);
         }
     }
 

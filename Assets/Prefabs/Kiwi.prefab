@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3044966650383486539}
   m_Layer: 0
   m_Name: Kiwi
-  m_TagString: Untagged
+  m_TagString: Kiwi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,4 +188,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c696d86f8bd89748b5f571d4821e1e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 1.2
+  scrollSpeed: 1.5

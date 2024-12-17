@@ -5,6 +5,7 @@ public class ObstacleSpawnerScript : MonoBehaviour
     public GameObject[] standardObstacles;
 
     public GameObject bigObstacle;
+    public GameObject scoreFlag;
 
     private float currentSpawnTimer = 4.5f;
     private float thresholdSpawnTimer = 5f;
@@ -23,7 +24,7 @@ public class ObstacleSpawnerScript : MonoBehaviour
 
             if (Random.Range(0, 10) % 4 == 0)
             {
-                position.y = 2.3f;
+                position.y = 0.75f;
 
                 GameObject prefab = bigObstacle;
 
@@ -46,6 +47,12 @@ public class ObstacleSpawnerScript : MonoBehaviour
                 firstObstacle.transform.parent = transform;
                 secondObstacle.transform.parent = transform;
             }
+
+            Vector3 flagPosition = transform.position;
+            flagPosition.x = position.x + 2.5f;
+            flagPosition.y = -4f;
+            GameObject flag = Instantiate(scoreFlag, flagPosition, Quaternion.identity);
+            flag.transform.parent = transform;
             currentSpawnTimer = 0f;
         }
     }
@@ -55,11 +62,11 @@ public class ObstacleSpawnerScript : MonoBehaviour
         switch (idx)
         {
             case 0:
-                position.y = isUpper ? 4.65f : -1.8f;
+                position.y = isUpper ? 4.65f : -2.2f;
                 break;
 
             case 1:
-                position.y = isUpper ? 4.8f : -0.95f;
+                position.y = isUpper ? 4.8f : -1.6f;
                 break;
 
             case 2:

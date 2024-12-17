@@ -642,7 +642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0505143ae9dc2e4d8e598bb51cc04ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blink: {fileID: 0}
+  blink: {fileID: 4753380433660548960, guid: aaf7daaeaacb40b4398869a49a358db8, type: 3}
 --- !u!1 &1496005448
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,6 +692,7 @@ MonoBehaviour:
   - {fileID: 5285637061473092495, guid: 168826b3a1b2a004db88dc92774861fd, type: 3}
   - {fileID: 1954427052808421746, guid: f6ed063aec4e05840a82c075e4216b74, type: 3}
   bigObstacle: {fileID: 1623793556132630771, guid: d8f47da2fcd20e742b2b929ad1b3f953, type: 3}
+  scoreFlag: {fileID: 7927277838307737610, guid: 647764a91cce4784ab7e8c76e7d00b8e, type: 3}
 --- !u!1 &1535545341 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7198240869329221124, guid: 812fa6b832434d741ae704438f05798d, type: 3}
@@ -737,7 +738,7 @@ GameObject:
   - component: {fileID: 2007190626}
   - component: {fileID: 2007190627}
   m_Layer: 0
-  m_Name: KiwiSpawner
+  m_Name: FruitSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -771,6 +772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kiwi: {fileID: 2407581810090326462, guid: 533164d9d6ec0214bbf2c4c838e9e417, type: 3}
+  strawberry: {fileID: 3937552979718950567, guid: adff0aea69f50ff4fbfaffad99c00a9b, type: 3}
 --- !u!1001 &1749334904293410922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -840,6 +842,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1230571774401305094, guid: 040c9b0f647f51e468bbcff5cb78bcaa, type: 3}
+      propertyPath: upForce
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230571774401305094, guid: 040c9b0f647f51e468bbcff5cb78bcaa, type: 3}
       propertyPath: ghostCollider
       value: 
       objectReference: {fileID: 447024956}
@@ -885,6 +891,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4438561545796941521, guid: 040c9b0f647f51e468bbcff5cb78bcaa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8171543803596678486, guid: 040c9b0f647f51e468bbcff5cb78bcaa, type: 3}
+      propertyPath: m_SleepingMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9051511087255275832, guid: 040c9b0f647f51e468bbcff5cb78bcaa, type: 3}

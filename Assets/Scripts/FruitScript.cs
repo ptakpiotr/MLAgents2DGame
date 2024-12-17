@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class KiwiScript : MonoBehaviour
+public class FruitScript : MonoBehaviour
 {
     public float scrollSpeed = 1.2f;
 
@@ -30,7 +30,13 @@ public class KiwiScript : MonoBehaviour
 
             if (playerScript is not null)
             {
-                playerScript.UpdateScore(50);
+                int increaseScore = this.tag switch
+                {
+                    "Kiwi" => 50,
+                    "Strawberry" => 500,
+                    _ => -1
+                };
+                playerScript.UpdateScore(increaseScore);
             }
 
             gameObject.SetActive(false);

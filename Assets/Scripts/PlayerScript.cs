@@ -7,7 +7,7 @@ public class PlayerScript : MonoBehaviour
     private int score = 0;
 
     public BoxCollider2D ghostCollider;
-    public float upForce = 1.5f;
+    public float upForce = 2f;
 
     private void Awake()
     {
@@ -28,14 +28,6 @@ public class PlayerScript : MonoBehaviour
             animator.Play("up");
             Invoke("ChangeSprite", 1f);
             Debug.Log($"Score: {score}");
-        }
-    }
-
-    private void Update()
-    {
-        if (gameObject.active)
-        {
-            score += 1;
         }
     }
 
