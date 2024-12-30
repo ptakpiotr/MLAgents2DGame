@@ -26,7 +26,7 @@ public class GhostScript : Agent
         AddReward(0.1f);
         var vectorAction = actions.DiscreteActions.Array;
         Debug.Log(string.Join(",", vectorAction));
-        if (Mathf.FloorToInt(vectorAction[0]) != 0) { return; }
+        if (Mathf.FloorToInt(vectorAction[0]) != 1) { return; }
 
         Jump();
     }
