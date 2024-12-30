@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GhostScript : Agent
 {
     public Rigidbody2D rigidbody;
-    public float upForce = 2f;
+    public float upForce = 0.2f;
 
     private Vector2 startingPos;
 
@@ -58,7 +58,8 @@ public class GhostScript : Agent
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
-        base.Heuristic(actionsOut);
+        var discreteActionsOut = actionsOut.DiscreteActions;
+        discreteActionsOut[0] = Input.GetKey(KeyCode.Space) ? 1 : 0;
     }
 
     private void Jump()
