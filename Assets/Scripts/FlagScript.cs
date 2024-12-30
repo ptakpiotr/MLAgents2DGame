@@ -20,7 +20,7 @@ public class FlagScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" || collision.tag == "Agent")
+        if (collision.tag == "Player")
         {
             PlayerScript playerScript = collision.GetComponent<PlayerScript>();
 
@@ -29,6 +29,10 @@ public class FlagScript : MonoBehaviour
                 playerScript.UpdateScore(10);
             }
 
+            gameObject.SetActive(false);
+        }
+        else if (collision.tag == "Agent")
+        {
             gameObject.SetActive(false);
         }
     }

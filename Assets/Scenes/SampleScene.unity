@@ -247,6 +247,106 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 486115936571994150, guid: 040c9b0f647f51e468bbcff5cb78bcaa, type: 3}
   m_PrefabInstance: {fileID: 625401165}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &507302188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1674799689835801344, guid: 040c9b0f647f51e468bbcff5cb78bcaa, type: 3}
+  m_PrefabInstance: {fileID: 625401165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &507302190 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 8171543803596678486, guid: 040c9b0f647f51e468bbcff5cb78bcaa, type: 3}
+  m_PrefabInstance: {fileID: 625401165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &507302193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507302188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bef65af6b3a8b5c42b76ff06e9903b56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  rigidbody: {fileID: 507302190}
+  upForce: 2
+--- !u!114 &507302194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507302188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 0
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 0
+      BranchSizes: 01000000
+    VectorActionSize: 01000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 0
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 0}
+  m_InferenceDevice: 0
+  m_BehaviorType: 0
+  m_BehaviorName: GhostBehavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_DeterministicInference: 0
+  m_ObservableAttributeHandling: 0
+--- !u!114 &507302195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507302188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 1
+  DecisionStep: 0
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &507302196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507302188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67c7e722ba14acd9153bb4488bff6e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SensorName: RayPerceptionSensor
+  m_DetectableTags: []
+  m_RaysPerDirection: 7
+  m_MaxRayDegrees: 90
+  m_SphereCastRadius: 1.25
+  m_RayLength: 45
+  m_RayLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  m_ObservationStacks: 1
+  m_AlternatingRayOrder: 1
+  m_UseBatchedRaycasts: 0
+  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
+  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,7 +636,19 @@ PrefabInstance:
     - {fileID: 1230571774401305094, guid: 040c9b0f647f51e468bbcff5cb78bcaa, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1674799689835801344, guid: 040c9b0f647f51e468bbcff5cb78bcaa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 507302194}
+    - targetCorrespondingSourceObject: {fileID: 1674799689835801344, guid: 040c9b0f647f51e468bbcff5cb78bcaa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 507302193}
+    - targetCorrespondingSourceObject: {fileID: 1674799689835801344, guid: 040c9b0f647f51e468bbcff5cb78bcaa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 507302195}
+    - targetCorrespondingSourceObject: {fileID: 1674799689835801344, guid: 040c9b0f647f51e468bbcff5cb78bcaa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 507302196}
   m_SourcePrefab: {fileID: 100100000, guid: 040c9b0f647f51e468bbcff5cb78bcaa, type: 3}
 --- !u!1001 &1296950888
 PrefabInstance:

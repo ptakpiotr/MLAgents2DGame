@@ -70,7 +70,7 @@ public class ObstacleSpawnerScript : MonoBehaviour
                 break;
 
             case 2:
-                position.y = isUpper ? 4.98f : 0.0f;
+                position.y = isUpper ? 4.98f : -1.0f;
                 break;
         }
     }

@@ -24,7 +24,7 @@ public class FruitScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" || collision.tag == "Agent")
+        if (collision.tag == "Player")
         {
             PlayerScript playerScript = collision.GetComponent<PlayerScript>();
 
@@ -39,6 +39,10 @@ public class FruitScript : MonoBehaviour
                 playerScript.UpdateScore(increaseScore);
             }
 
+            gameObject.SetActive(false);
+        }
+        else if(collision.tag == "Agent")
+        {
             gameObject.SetActive(false);
         }
     }

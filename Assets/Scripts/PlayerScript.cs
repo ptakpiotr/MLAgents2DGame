@@ -40,4 +40,9 @@ public class PlayerScript : MonoBehaviour
     {
         score += increaseScore;
     }
+
+    public void SetScore(int newScore)
+    {
+        score = newScore;
+    }
 }
